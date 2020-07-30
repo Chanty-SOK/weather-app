@@ -14,6 +14,16 @@ npm install expo-cli --global
 expo start
 ```
 
+## ScreenShot
+
+<div align="center">
+    <img src="/assets/screen-shot1.jpg" width="400px"</img> 
+</div>
+<br>
+<br>
+<div align="center">
+    <img src="/assets/screen-shot2.jpg" width="400px"</img> 
+</div>
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
