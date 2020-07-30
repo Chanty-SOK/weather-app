@@ -5,6 +5,7 @@ import { StatusBar } from "expo-status-bar";
 import ReloadIcon from "./components/ReloadIcon";
 import UnitPicker from "./components/UnitsPicker";
 import React, { useEffect, useState } from "react";
+import WeatherDetails from "./components/WeatherDetails";
 import { StyleSheet, Text, View, ActivityIndicator } from "react-native";
 
 const WEATHER_API_KEY = "338776031e3d59907bb3b1eec5d11e27";
@@ -59,12 +60,16 @@ export default function App() {
             setUnitsSystem={setUnitsSystem}
           />
         </View>
+        <WeatherDetails
+          currentWeather={currentWeather}
+          unitsSystem={unitsSystem}
+        />
       </View>
     );
   } else if (errorMessage) {
     return (
       <View style={styles.container}>
-        <Text>{errorMessage}</Text>
+        <Text style={{ alignItems: "center" }}>{errorMessage}</Text>
         <StatusBar style="auto" />
       </View>
     );
@@ -81,7 +86,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
-    alignItems: "center",
   },
   main: {
     justifyContent: "center",
